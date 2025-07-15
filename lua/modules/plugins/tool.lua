@@ -103,7 +103,10 @@ tool["nvim-telescope/telescope.nvim"] = {
 		{ "nvim-tree/nvim-web-devicons" },
 		{ "jvgrootveld/telescope-zoxide" },
 		{ "debugloop/telescope-undo.nvim" },
-		{ "nvim-telescope/telescope-frecency.nvim" },
+		{
+			"nvim-telescope/telescope-frecency.nvim",
+			config = require("tool.frequency"),
+		},
 		{ "nvim-telescope/telescope-live-grep-args.nvim" },
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		{

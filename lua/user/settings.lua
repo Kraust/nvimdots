@@ -6,7 +6,7 @@ settings["use_copilot"] = false
 
 settings["use_chat"] = false
 
-settings["colorscheme"] = "catppuccin"
+settings["colorscheme"] = "lytmode"
 
 settings["lsp_deps"] = {
 	"cmake",
@@ -32,6 +32,12 @@ settings["gui_config"] = {
 
 settings["neovide_config"] = {
 	cursor_vfx_mode = "none",
+	cursor_trail_length = 0,
+	cursor_animation_length = 0,
+	cursor_vfx_particle_speed = 0,
+	cursor_vfx_particle_density = 0,
+	cursor_vfx_particle_lifetime = 0,
+	opacity = 0.5,
 }
 
 settings["disabled_plugins"] = {

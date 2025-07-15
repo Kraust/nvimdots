@@ -5,6 +5,7 @@ local options = {
 	cursorcolumn = false,
 	foldenable = false,
 	ignorecase = false,
+	relativenumber = false,
 }
 
 return options
