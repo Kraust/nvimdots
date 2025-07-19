@@ -4,7 +4,15 @@ settings["use_ssh"] = true
 
 settings["use_copilot"] = false
 
-settings["use_chat"] = false
+settings["use_chat"] = true
+settings["chat_models"] = {
+	-- free models
+	"moonshotai/kimi-k2:free",
+	"qwen/qwen-2.5-coder-32b-instruct:free",
+	"deepseek/deepseek-chat-v3-0324:free",
+	"deepseek/deepseek-r1:free",
+	"google/gemma-3-27b-it:free",
+}
 
 settings["colorscheme"] = "lytmode"
 
@@ -42,6 +50,7 @@ settings["neovide_config"] = {
 
 settings["disabled_plugins"] = {
 	"m4xshen/autoclose.nvim",
+	"folke/edgy.nvim",
 }
 
 settings["dashboard_image"] = {
