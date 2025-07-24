@@ -1,5 +1,5 @@
 return function() -- This file MUST return a function accepting no parameter and has no return value
-	local home = vim.fn.expand("~/tasks")
+	local home = vim.fn.expand("~/telekasten")
 	require("telekasten").setup({
 		home = home,
 
@@ -17,7 +17,7 @@ return function() -- This file MUST return a function accepting no parameter and
 		-- dir names for special notes (absolute path or subdir name)
 		dailies = home .. "/" .. "daily",
 		weeklies = home .. "/" .. "weekly",
-		templates = home .. "/" .. "templates",
+		templates = vim.fn.expand("~/.config/nvim/templates"),
 
 		-- image (sub)dir for pasting
 		-- dir name (absolute path or subdir name)
@@ -56,15 +56,15 @@ return function() -- This file MUST return a function accepting no parameter and
 
 		-- template for new notes (new_note, follow_link)
 		-- set to `nil` or do not specify if you do not want a template
-		template_new_note = home .. "/" .. "templates/new_note.md",
+		template_new_note = vim.fn.expand("~/.config/nvim/templates/new_note.md"),
 
 		-- template for newly created daily notes (goto_today)
 		-- set to `nil` or do not specify if you do not want a template
-		template_new_daily = home .. "/" .. "templates/daily.md",
+		template_new_daily = vim.fn.expand("~/.config/nvim/templates/daily.md"),
 
 		-- template for newly created weekly notes (goto_thisweek)
 		-- set to `nil` or do not specify if you do not want a template
-		template_new_weekly = home .. "/" .. "templates/weekly.md",
+		template_new_weekly = vim.fn.expand("~/.config/nvim/templates/weekly.md"),
 
 		-- image link style
 		-- wiki:     ![[image name]]

@@ -25,6 +25,10 @@ settings["lsp_deps"] = {
 	"jinja_lsp",
 	"powershell_es",
 	"yamlls",
+	"ruff",
+	"black",
+	"flake8",
+	"isort",
 }
 
 settings["server_formatting_block_list"] = {
@@ -51,6 +55,7 @@ settings["neovide_config"] = {
 settings["disabled_plugins"] = {
 	"m4xshen/autoclose.nvim",
 	"folke/edgy.nvim",
+	"Bekaboo/dropbar.nvim",
 }
 
 settings["dashboard_image"] = {
