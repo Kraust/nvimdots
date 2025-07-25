@@ -122,7 +122,6 @@ settings["lsp_deps"] = {
 -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins
 ---@type string[]
 settings["null_ls_deps"] = {
-	"clang_format",
 	"gofumpt",
 	"goimports",
 	"prettier",

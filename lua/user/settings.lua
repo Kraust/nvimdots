@@ -29,6 +29,7 @@ settings["lsp_deps"] = {
 	"black",
 	"flake8",
 	"isort",
+	"marksman",
 }
 
 settings["server_formatting_block_list"] = {
