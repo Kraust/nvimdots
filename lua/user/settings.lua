@@ -1,9 +1,9 @@
 local settings = {}
 
 settings["use_ssh"] = true
-
+settings["diagnostics_virtual_lines"] = true
+settings["transparent_background"] = true
 settings["use_copilot"] = false
-
 settings["use_chat"] = true
 settings["chat_models"] = {
 	-- free models
