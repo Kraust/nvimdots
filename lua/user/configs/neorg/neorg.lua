@@ -11,6 +11,9 @@ return function()
 					default_workspace = "notes",
 				},
 			},
+			["core.ui"] = {},
+			["core.dirman.utils"] = {},
+			["core.integrations.treesitter"] = {},
 			["external.templates"] = {
 				-- templates_dir = vim.fn.stdpath("config") .. "/templates/norg",
 				-- default_subcommand = "add", -- or "fload", "load"

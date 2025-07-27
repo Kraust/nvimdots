@@ -6,7 +6,8 @@ return {
 	["n|<leader>tt"] = map_cr("terminal"):with_desc("ereate etrminal buffer"),
 	["n|<leader>tc"] = map_cr('let @+ = expand("%:p")'):with_desc("copy filename to buffer."),
 
-	["n|<leader>qq"] = map_cu("Neorg journal today"):with_noremap():with_silent():with_desc("neorg: Joural Today"),
+	["n|<leader>qq"] = map_cu("Neorg index"):with_noremap():with_silent():with_desc("neorg: Joural Today"),
+	["n|<leader>qQ"] = map_cu("Neorg journal today"):with_noremap():with_silent():with_desc("neorg: Joural Today"),
 
 	["n|<leader>fq"] = map_cu("Telescope live_grep search_dirs={'~/notes'}")
 		:with_noremap()
