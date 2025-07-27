@@ -552,6 +552,7 @@ return function()
 			filetypes = {
 				"", -- for all buffers without a file type
 				"alpha",
+				"bigfile",
 				"checkhealth",
 				"dap-repl",
 				"diff",

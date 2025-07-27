@@ -22,7 +22,6 @@ editor["m4xshen/autoclose.nvim"] = {
 editor["pteroctopus/faster.nvim"] = {
 	lazy = false,
 	cond = require("core.settings").load_big_files_faster,
-	config = require("editor.faster"),
 }
 editor["ojroques/nvim-bufdel"] = {
 	lazy = true,

@@ -1,5 +1,5 @@
 return function()
-	require("modules.utils").load_plugin("mini.cursorword", {
+	require("mini.cursorword").setup({
 		-- Delay (in ms) between when cursor moved and when highlighting appeared
 		delay = 200,
 	})

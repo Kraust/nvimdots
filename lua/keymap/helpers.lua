@@ -17,28 +17,27 @@ _G._flash_esc_or_noh = function()
 	end
 end
 
-_G._telescope_collections = function(opts)
-	local tabs = require("search.tabs")
+_G._telescope_collections = function(picker_type)
 	local actions = require("telescope.actions")
-	local state = require("telescope.actions.state")
-	local pickers = require("telescope.pickers")
-	local finders = require("telescope.finders")
+	local action_state = require("telescope.actions.state")
 	local conf = require("telescope.config").values
-	local collections = vim.tbl_keys(tabs.collections)
+	local finder = require("telescope.finders")
+	local pickers = require("telescope.pickers")
+	picker_type = picker_type or {}
 
-	-- build and launch picker
-	opts = opts or {}
+	local collections = vim.tbl_keys(require("search.tabs").collections)
 	pickers
-		.new(opts, {
+		.new(picker_type, {
 			prompt_title = "Telescope Collections",
-			finder = finders.new_table({ results = collections }),
-			sorter = conf.generic_sorter(opts),
+			finder = finder.new_table({ results = collections }),
+			sorter = conf.generic_sorter(picker_type),
 			attach_mappings = function(bufnr)
 				actions.select_default:replace(function()
 					actions.close(bufnr)
-					local selection = state.get_selected_entry()
+					local selection = action_state.get_selected_entry()
 					require("search").open({ collection = selection[1] })
 				end)
+
 				return true
 			end,
 		})

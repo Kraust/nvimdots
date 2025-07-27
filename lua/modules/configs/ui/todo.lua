@@ -32,6 +32,7 @@ return function()
 			max_line_len = 500,
 			exclude = {
 				"alpha",
+				"bigfile",
 				"checkhealth",
 				"dap-repl",
 				"diff",

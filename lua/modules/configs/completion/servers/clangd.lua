@@ -12,10 +12,10 @@ local function switch_source_header_splitcmd(bufnr, splitcmd)
 				return
 			end
 			vim.api.nvim_command(splitcmd .. " " .. vim.uri_to_fname(result))
-		end, bufnr)
+		end)
 	else
 		vim.notify(
-			"Method textDocument/switchSourceHeader is not supported by any active server attached to buffer",
+			"Method textDocument/switchSourceHeader is not supported by any active server on this buffer",
 			vim.log.levels.ERROR,
 			{ title = "LSP Error!" }
 		)
@@ -34,28 +34,26 @@ local function get_binary_path_list(binaries)
 end
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/configs/clangd.lua
-return function(defaults)
+return function(options)
 	require("lspconfig").clangd.setup({
-		on_attach = defaults.on_attach,
-		capabilities = vim.tbl_deep_extend("keep", { offsetEncoding = { "utf-16", "utf-8" } }, defaults.capabilities),
+		on_attach = options.on_attach,
+		capabilities = vim.tbl_deep_extend("keep", { offsetEncoding = { "utf-16", "utf-8" } }, options.capabilities),
 		single_file_support = true,
 		cmd = {
 			"clangd",
-			"-j=9",
+			"-j=12",
 			"--enable-config",
+			"--background-index",
+			"--pch-storage=memory",
 			-- You MUST set this arg ↓ to your c/cpp compiler location (if not included)!
 			"--query-driver=" .. get_binary_path_list({ "clang++", "clang", "gcc", "g++" }),
-			"--all-scopes-completion",
-			"--background-index",
 			"--clang-tidy",
-			"--completion-parse=auto",
-			"--completion-style=bundled",
-			"--function-arg-placeholders",
+			"--all-scopes-completion",
+			"--completion-style=detailed",
 			"--header-insertion-decorators",
 			"--header-insertion=iwyu",
-			"--limit-references=1000",
-			"--limit-results=300",
-			"--pch-storage=memory",
+			"--limit-references=3000",
+			"--limit-results=350",
 		},
 		commands = {
 			ClangdSwitchSourceHeader = {

@@ -17,18 +17,13 @@ return function()
 	local function debug_terminate_cb()
 		if _debugging then
 			_G._debugging = false
-		end
-	end
-	local function debug_disconnect_cb()
-		if _debugging then
-			_G._debugging = false
 			dapui.close()
 		end
 	end
 	dap.listeners.after.event_initialized["dapui_config"] = debug_init_cb
 	dap.listeners.before.event_terminated["dapui_config"] = debug_terminate_cb
 	dap.listeners.before.event_exited["dapui_config"] = debug_terminate_cb
-	dap.listeners.before.disconnect["dapui_config"] = debug_disconnect_cb
+	dap.listeners.before.disconnect["dapui_config"] = debug_terminate_cb
 
 	-- We need to override nvim-dap's default highlight groups, AFTER requiring nvim-dap for catppuccin.
 	vim.api.nvim_set_hl(0, "DapStopped", { fg = colors.green })
@@ -83,7 +78,7 @@ return function()
 
 	require("modules.utils").load_plugin("mason-nvim-dap", {
 		ensure_installed = require("core.settings").dap_deps,
-		automatic_installation = false,
+		automatic_installation = true,
 		handlers = { mason_dap_handler },
 	})
 end

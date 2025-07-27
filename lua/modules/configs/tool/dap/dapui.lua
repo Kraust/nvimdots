@@ -26,7 +26,7 @@ return function()
 					-- Provide as ID strings or tables with "id" and "size" keys
 					{
 						id = "scopes",
-						size = 0.3,
+						size = 0.3, -- Can be float or integer > 1
 					},
 					{ id = "watches", size = 0.3 },
 					{ id = "stacks", size = 0.3 },
@@ -60,7 +60,9 @@ return function()
 			},
 		},
 		floating = {
-			border = "single",
+			max_height = nil, -- These can be integers or a float between 0 and 1.
+			max_width = nil, -- Floats will be treated as percentage of your screen.
+			border = "single", -- Border style. Can be "single", "double" or "rounded"
 			mappings = {
 				close = { "q", "<Esc>" },
 			},
