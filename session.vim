@@ -13,15 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +3 term:////980:pwsh
-badd +0 term:////1116:pwsh
-badd +0 term:////1141:pwsh
-badd +0 term:////1165:pwsh
-badd +0 term:////1188:pwsh
-badd +0 term:////1213:pwsh
-badd +0 term:////1241:pwsh
-badd +0 term:////1267:pwsh
-badd +0 term:////1292:pwsh
+badd +3 term:////980:xonsh
+badd +0 term:////1116:xonsh
+badd +0 term:////1141:xonsh
+badd +0 term:////1165:xonsh
+badd +0 term:////1188:xonsh
+badd +0 term:////1213:xonsh
+badd +0 term:////1241:xonsh
+badd +0 term:////1267:xonsh
+badd +0 term:////1292:xonsh
 argglobal
 %argdel
 let s:save_splitbelow = &splitbelow
@@ -175,9 +175,9 @@ setlocal foldnestmax=20
 setlocal foldenable
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1292:pwsh", ":p")) | buffer term:////1292:pwsh | else | edit term:////1292:pwsh | endif
+if bufexists(fnamemodify("term:////1292:xonsh", ":p")) | buffer term:////1292:xonsh | else | edit term:////1292:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1292:pwsh
+  silent file term:////1292:xonsh
 endif
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -195,9 +195,9 @@ keepjumps 13
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1267:pwsh", ":p")) | buffer term:////1267:pwsh | else | edit term:////1267:pwsh | endif
+if bufexists(fnamemodify("term:////1267:xonsh", ":p")) | buffer term:////1267:xonsh | else | edit term:////1267:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1267:pwsh
+  silent file term:////1267:xonsh
 endif
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -215,9 +215,9 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1241:pwsh", ":p")) | buffer term:////1241:pwsh | else | edit term:////1241:pwsh | endif
+if bufexists(fnamemodify("term:////1241:xonsh", ":p")) | buffer term:////1241:xonsh | else | edit term:////1241:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1241:pwsh
+  silent file term:////1241:xonsh
 endif
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -235,9 +235,9 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1213:pwsh", ":p")) | buffer term:////1213:pwsh | else | edit term:////1213:pwsh | endif
+if bufexists(fnamemodify("term:////1213:xonsh", ":p")) | buffer term:////1213:xonsh | else | edit term:////1213:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1213:pwsh
+  silent file term:////1213:xonsh
 endif
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -255,9 +255,9 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1188:pwsh", ":p")) | buffer term:////1188:pwsh | else | edit term:////1188:pwsh | endif
+if bufexists(fnamemodify("term:////1188:xonsh", ":p")) | buffer term:////1188:xonsh | else | edit term:////1188:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1188:pwsh
+  silent file term:////1188:xonsh
 endif
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -275,9 +275,9 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1165:pwsh", ":p")) | buffer term:////1165:pwsh | else | edit term:////1165:pwsh | endif
+if bufexists(fnamemodify("term:////1165:xonsh", ":p")) | buffer term:////1165:xonsh | else | edit term:////1165:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1165:pwsh
+  silent file term:////1165:xonsh
 endif
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -295,9 +295,9 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1141:pwsh", ":p")) | buffer term:////1141:pwsh | else | edit term:////1141:pwsh | endif
+if bufexists(fnamemodify("term:////1141:xonsh", ":p")) | buffer term:////1141:xonsh | else | edit term:////1141:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1141:pwsh
+  silent file term:////1141:xonsh
 endif
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -315,9 +315,9 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:////1116:pwsh", ":p")) | buffer term:////1116:pwsh | else | edit term:////1116:pwsh | endif
+if bufexists(fnamemodify("term:////1116:xonsh", ":p")) | buffer term:////1116:xonsh | else | edit term:////1116:xonsh | endif
 if &buftype ==# 'terminal'
-  silent file term:////1116:pwsh
+  silent file term:////1116:xonsh
 endif
 balt term:////980:/bin/bash
 setlocal foldmethod=manual
