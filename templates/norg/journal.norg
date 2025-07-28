@@ -1,8 +1,8 @@
 @document.meta
-title: {TITLE_INPUT}
+title:0 {TODAY}
 description:
 authors: {AUTHOR}
-categories:
+categories: notes
 created: {TODAY}
 updated: {TODAY}
 version: 1.0.0
